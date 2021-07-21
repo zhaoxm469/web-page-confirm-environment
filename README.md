@@ -2,6 +2,8 @@
 
 一个非常轻量的JS插件 , 主要用于帮助我们快速确认当前网页所运行环境.  
 
+兼容ES3+
+
 ## 安装
 
 方式1: 通过 CDN 安装  
@@ -9,7 +11,7 @@
 最简单的方法是直接在 html 文件中引入 CDN 链接
 
 ```html
-<script src="https://asdasd.asdasd.as"></script>
+<script src="https://cdn.jsdelivr.net/npm/web-page-confirm-environment/dist/index.umd.min.js"></script>
 ```
 
 方式2: 通过 npm 安装
@@ -24,7 +26,7 @@ script 标签 CDN方式引入
 
 ```js
 const environment = new WebPageConfirmEnvironment({
-    // 跟自己IOS客户端 协商好的 标识。客户端打开H5往UA设置得字符串标识
+    // 跟自家客户端 协商好，往 页面设置的UA标识。
     ios: 'very-good-ios',
     android: 'very-good-android'
 });
@@ -41,7 +43,6 @@ NPM安装, import 方式引入
 ```js
 import WebPageConfirmEnvironment from 'web-page-confirm-environment'
 const environment = new WebPageConfirmEnvironment({
-    // 跟自己IOS客户端 协商好的 标识。客户端打开H5往UA设置得字符串标识
     iosUa: 'very-good-ios',
     androidUa: 'very-good-android'
 });
