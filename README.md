@@ -49,7 +49,7 @@ const environment = new WebPageConfirmEnvironment({
 ## props  
 
 参数		|		说明		|
-----------|------------|--------
+----------|-------------------|
 isPC 	  |是否正在PC内   		|
 isIos 	  |是否是ios	 	   |
 isAndroid |是否是安卓	  		|
