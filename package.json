@@ -1,0 +1,59 @@
+{
+    "name": "web-page-confirm-environment",
+    "version": "0.0.4",
+    "description": "一个非常轻量的JS插件 , 主要用于帮助我们快速确认当前网页所运行环境.  ",
+    "keywords": [],
+    "scripts": {
+        "dev": "rollup --c rollup.config.dev.ts --watch",
+        "build": "rollup --c rollup.config.build.ts",
+        "commit": "cz",
+        "npmp": "node npmpublish"
+    },
+    "typings": "./dist/index.d.ts",
+    "main": "./dist/index.umd.js",
+    "module": "./dist/index.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.umd.js"
+        }
+    },
+    "author": "zhaoxingming",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.14.6",
+        "@babel/preset-env": "^7.14.7",
+        "@babel/preset-typescript": "^7.14.5",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-node-resolve": "^13.0.0",
+        "@rollup/plugin-typescript": "^8.2.1",
+        "@types/node": "^16.3.3",
+        "@typescript-eslint/parser": "^4.28.2",
+        "chalk": "^2.4.2",
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.2.0",
+        "eslint": "^7.30.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.23.4",
+        "execa": "^5.1.1",
+        "inquirer": "^6.5.2",
+        "ora": "^5.4.1",
+        "rollup": "^2.53.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-dev": "^1.1.3",
+        "rollup-plugin-dts": "^3.0.2",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-terser": "^7.0.2",
+        "typescript": "^4.3.5"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zhaoxm469/web-page-confirm-environment.git"
+    },
+    "homepage": "https://github.com/zhaoxm469/web-page-confirm-environment"
+}
