@@ -32,7 +32,7 @@ const environment = new WebPageConfirmEnvironment({
 // 打印UA
 console.log(environment.printUa())
 
-// 是否在微信内
+// 是否在微信
 console.log(environment.isWechat)
 ```
 
@@ -49,18 +49,18 @@ const environment = new WebPageConfirmEnvironment({
 
 ## props  
 
-参数		|		说明		|	类型	|
-----------|------------|-------------------
-isPC 	  |是否正在PC内   		|	string |
-isIos 	  |是否是ios	 	   |	string |
-isAndroid |是否是安卓	  		|	string |
-isWechat  |是否是在微信生浏览器中 |	  string |
-isWxWork  |是否在企业微信中		 |	 string |
-isWxmp 	  |是否在微信小程序		 |	 string |
-isDingding|是否是钉钉内			|	string |
-isInnerAdr|是否是自家安卓app	 |	 string |
-isInnerIos|是否是自家ios app	|	string |
-isInnerApp|是否是自家app		|	string |
+参数		|		说明		|
+----------|------------|--------
+isPC 	  |是否正在PC内   		|
+isIos 	  |是否是ios	 	   |
+isAndroid |是否是安卓	  		|
+isWechat  |是否是在微信生浏览器中 |
+isWxWork  |是否在企业微信中		 |
+isWxmp 	  |是否在微信小程序		 |
+isDingding|是否是钉钉内			|
+isInnerAdr|是否是自家安卓app	 |
+isInnerIos|是否是自家ios app	|
+isInnerApp|是否是自家app		|
 
 ## events  
 
