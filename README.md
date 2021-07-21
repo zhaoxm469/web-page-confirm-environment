@@ -32,6 +32,7 @@ const environment = new WebPageConfirmEnvironment({
 // 打印UA
 console.log(environment.printUa())
 
+// 是否在微信内
 console.log(environment.isWechat)
 ```
 
