@@ -1,24 +1,24 @@
 /*
  * @Author: zhaoxingming
  * @Date: 2021-07-16 02:43:04
- * @LastEditTime: 2021-08-03 15:25:59
+ * @LastEditTime: 2021-08-03 15:37:30
  * @LastEditors: vscode
  * @Description: 用于判断当前网页所在的运行环境
  *
  */
 
-interface IClientUa {
+interface IConfig {
     // 跟IOS客户端 端协商 往前端页面塞入的UA标识
-    ios?: string;
+    iosUa?: string;
     // 跟Android客户端 端协商 往前端页面塞入的UA标识
-    android?: string;
+    androidUa?: string;
     // 自定义UA
     ua?: string;
 }
 
-const clientUaDef: IClientUa = {
-    ios: '',
-    android: '',
+const configDef: IConfig = {
+    iosUa: '',
+    androidUa: '',
     ua: ''
 };
 
@@ -74,8 +74,8 @@ class WebPageConfirmEnvironment {
      */
     isInnerApp: boolean = false;
 
-    constructor(private clientUa: IClientUa) {
-        this.clientUa = Object.assign(clientUa, clientUaDef);
+    constructor(private clientUa: IConfig) {
+        this.clientUa = Object.assign(clientUa, configDef);
         this.editUa(clientUa.ua!);
         this.init();
     }
@@ -104,13 +104,13 @@ class WebPageConfirmEnvironment {
 
         this.isInnerAdr =
             this.isAndroid &&
-            Boolean(this.clientUa.android) &&
-            new RegExp(`${this.clientUa.android}`, 'i').test(this.ua);
+            Boolean(this.clientUa.androidUa) &&
+            new RegExp(`${this.clientUa.androidUa}`, 'i').test(this.ua);
 
         this.isInnerIos =
             this.isIos &&
-            Boolean(this.clientUa.ios) &&
-            new RegExp(`${this.clientUa.ios}`, 'i').test(this.ua);
+            Boolean(this.clientUa.iosUa) &&
+            new RegExp(`${this.clientUa.iosUa}`, 'i').test(this.ua);
 
         this.isInnerApp = this.isInnerAdr || this.isInnerIos;
     }
@@ -129,7 +129,7 @@ class WebPageConfirmEnvironment {
     }
 }
 
-export default function (clientUa?: IClientUa) {
-    Object.assign(clientUaDef, clientUa);
-    return new WebPageConfirmEnvironment(clientUaDef);
+export default function (config?: IConfig) {
+    Object.assign(configDef, config);
+    return new WebPageConfirmEnvironment(configDef);
 }
