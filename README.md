@@ -85,9 +85,9 @@ ua		  |自定义的UA标识								| 否   |string |
 
 参数		|		说明		|
 ----------|-------------------|
-isPC 	  |是否正在PC内   		|
-isIos 	  |是否是ios	 	   |
-isAndroid |是否是安卓	  		|
+isPC 	  |是否正在PC端内  		|
+isIos 	  |是否是iosAPP内 	   |
+isAndroid |是否是安卓APP内		|
 isWechat  |是否是在微信生浏览器中 |
 isWxWork  |是否在企业微信中		 |
 isWxmp 	  |是否在微信小程序		 |
