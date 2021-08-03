@@ -20,31 +20,64 @@ npm install -S web-page-confirm-environment
 
 ## 使用  
 
-script 标签 CDN方式引入
+script CDN方式引入
 
 ```js
-const environment = new WebPageConfirmEnvironment({
-    // 跟自家客户端 协商好，往 页面设置的UA标识。
-    ios: 'very-good-ios',
-    android: 'very-good-android'
-});
-
-// 打印UA
-console.log(environment.printUa())
+const environment = webPageConfirmEnvironment();
 
 // 是否在微信
 console.log(environment.isWechat)
 ```
 
-NPM安装, import 方式引入
+NPM方式
 
 ```js
-import WebPageConfirmEnvironment from 'web-page-confirm-environment'
-const environment = new WebPageConfirmEnvironment({
-    iosUa: 'very-good-ios',
-    androidUa: 'very-good-android'
-});
+import webPageConfirmEnvironment from 'web-page-confirm-environment'
+
+// 是否在微信
+console.log(environment.isWechat)
 ```
+
+判断是否在自家APP内
+
+```js
+const environment = webPageConfirmEnvironment({
+    // 跟自家客户端 协商好，往 页面设置的UA标识。
+    ios: 'very-good-ios',
+    android: 'very-good-android'
+});
+
+// 是否在自家安卓APP内
+console.log(environment.isInnerAdr)
+
+// 是否在自家IOS APP内
+console.log(environment.isInnerAdr)
+
+// 判断是否在自家APP内
+console.log(environment.isInnerApp)
+```
+
+自定义UA
+
+```js
+const environment = webPageConfirmEnvironment({
+    // 跟自家客户端 协商好，往 页面设置的UA标识。
+    ios: 'very-good-ios',
+    android: 'very-good-android',
+    ua: 'xx-xxx-xxxx'
+});
+
+// 打印UA
+console.log(environment.printUa()) // -> xx-xxx-xxxx
+```
+
+## webPageConfirmEnvironment(config? IConfig)
+
+参数	   |		说明								|   是否必传 |   类型 |
+----------|-------------------------------------------|-----------|-------|
+iosUa 	  |跟IOS客户端协商好 往前端页面塞入的UA标识 		| 否 		|string |
+androidUa |跟Android客户端协商好 往前端页面塞入的UA标识     | 否 		|string |
+ua		  |自定义的UA标识								| 否   |string |
 
 ## props  
 
@@ -57,6 +90,7 @@ isWechat  |是否是在微信生浏览器中 |
 isWxWork  |是否在企业微信中		 |
 isWxmp 	  |是否在微信小程序		 |
 isDingding|是否是钉钉内			|
+isFs      |是否是飞书浏览器中    |
 isInnerAdr|是否是自家安卓app	 |
 isInnerIos|是否是自家ios app	|
 isInnerApp|是否是自家app		|
