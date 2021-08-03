@@ -18,7 +18,7 @@ export default defineConfig({
             file: resolve('./', pkg.main),
             format: 'umd',
             // 一般指向pkg.name 就可以了 ， 这里是demo 就先写死一个
-            name: 'WebPageConfirmEnvironment',
+            name: 'webPageConfirmEnvironment',
             // 方便出现问题定位调试
             sourcemap: true
         },

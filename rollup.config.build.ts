@@ -19,7 +19,7 @@ export default defineConfig([
             {
                 file: resolve('./', pkg.main),
                 format: 'umd',
-                name: 'WebPageConfirmEnvironment'
+                name: 'webPageConfirmEnvironment'
             },
             {
                 file: resolve('./', pkg.module),
