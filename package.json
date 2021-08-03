@@ -1,6 +1,6 @@
 {
     "name": "web-page-confirm-environment",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "一个非常轻量的JS插件 , 主要用于帮助我们快速确认当前网页所运行环境.  ",
     "keywords": [],
     "scripts": {
