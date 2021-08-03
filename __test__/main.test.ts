@@ -119,7 +119,7 @@ describe('二. 环境判断', () => {
         const ua =
             'Mozilla/5.0 nucarf (Linux; Android 6.0.1; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) nucarf Chrome/92.0.4515.107 Mobile Safari/537.36 Edg/92.0.902.62';
         const env = webPageConfirmEnvironment({
-            android: 'nucarf',
+            androidUa: 'nucarf',
             ua
         });
         expect(env.isInnerAdr).toBeTruthy();
@@ -138,7 +138,7 @@ describe('二. 环境判断', () => {
         const ua =
             'Mozilla/5.0 (iPhone; nucarf  CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/92.0.4515.107';
         const env = webPageConfirmEnvironment({
-            ios: 'nucarf',
+            iosUa: 'nucarf',
             ua
         });
         expect(env.isInnerIos).toBeTruthy();
@@ -158,8 +158,8 @@ describe('二. 环境判断', () => {
             'Mozilla/5.0 nucarf (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/92.0.4515.107';
         const env = webPageConfirmEnvironment({
             ua,
-            ios: 'nucarf',
-            android: 'nucarf'
+            iosUa: 'nucarf',
+            androidUa: 'nucarf'
         });
         expect(env.isInnerApp).toBeTruthy();
     });
