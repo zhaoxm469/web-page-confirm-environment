@@ -79,7 +79,7 @@ iosUa 	  |跟IOS客户端协商好 往前端页面塞入的UA标识 		| 否 		|s
 androidUa |跟Android客户端协商好 往前端页面塞入的UA标识     | 否 		|string |
 ua		  |自定义的UA标识								| 否   |string |
 
-## props  
+## api  
 
 参数		|		说明		|
 ----------|-------------------|
