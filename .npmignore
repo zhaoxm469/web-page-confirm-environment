@@ -17,3 +17,4 @@ rollup.config.dev.ts
 tsconfig.json
 .cz-config.js
 coverage
+__test__
