@@ -34,6 +34,8 @@ NPM方式
 ```js
 import webPageConfirmEnvironment from 'web-page-confirm-environment'
 
+const environment = webPageConfirmEnvironment();
+
 // 是否在微信
 console.log(environment.isWechat)
 ```
