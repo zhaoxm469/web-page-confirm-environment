@@ -71,7 +71,7 @@ const environment = webPageConfirmEnvironment({
 console.log(environment.printUa()) // -> xx-xxx-xxxx
 ```
 
-## webPageConfirmEnvironment(config? IConfig)
+## config
 
 参数	   |		说明								|   是否必传 |   类型 |
 ----------|-------------------------------------------|-----------|-------|
